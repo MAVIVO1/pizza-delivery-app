@@ -1,0 +1,39 @@
+:root {
+  --crust: #2a0f0a; --crust-light: #3d1810; --tomato: #d84c33;
+  --cheese: #f0c419; --cream: #fff3e0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--crust); color: var(--cream); font-family: "Segoe UI", sans-serif; }
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 30px; background: var(--crust-light); border-bottom: 3px solid var(--tomato);
+}
+header h1 { margin: 0; font-size: 20px; color: var(--cheese); }
+main { padding: 30px; max-width: 900px; margin: 0 auto; }
+.card { background: var(--crust-light); border-radius: 12px; padding: 22px; margin-bottom: 20px; border: 1px solid #5a2a1c; }
+button.primary {
+  background: var(--tomato); color: white; border: none; padding: 10px 18px;
+  border-radius: 8px; font-weight: 700; cursor: pointer;
+}
+button.primary:hover { opacity: 0.9; }
+button.secondary { background: none; border: 1px solid var(--cheese); color: var(--cheese); padding: 9px 16px; border-radius: 8px; cursor: pointer; }
+input { padding: 9px; border-radius: 6px; border: 1px solid var(--tomato); background: #24100b; color: var(--cream); width: 100%; margin-bottom: 10px; }
+
+.step-nav { display: flex; gap: 8px; margin-bottom: 20px; }
+.step-nav div { flex: 1; text-align: center; padding: 8px; border-radius: 6px; background: #24100b; font-size: 12px; }
+.step-nav div.active { background: var(--tomato); font-weight: 700; }
+.step-nav div.done { background: #4c6b2f; }
+
+.option-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.option-card {
+  background: #24100b; border: 2px solid transparent; border-radius: 10px; padding: 14px;
+  text-align: center; cursor: pointer;
+}
+.option-card.selected { border-color: var(--cheese); background: #3a1c10; }
+.option-card .price { font-size: 12px; opacity: 0.7; }
+
+svg.pizza-plate circle.layer { transition: opacity 0.4s ease; }
+
+.tracker-status { display: flex; gap: 6px; margin-top: 14px; }
+.tracker-status div { flex: 1; text-align: center; padding: 8px 4px; border-radius: 6px; background: #24100b; font-size: 11px; }
+.tracker-status div.reached { background: var(--tomato); font-weight: 700; }
